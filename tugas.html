@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas java script</title>
+    
+    <style>
+        body {background-color: aqua;}
+    </style>
+</head>
+<body >
+     
+     
+    <script >
+     function tekan()
+     {
+        var nimstr = (document.fform.nim.value);
+        var namastr = (document.fform.nama.value);
+        var kelaminstr = (document.fform.kelamin.value);
+        var agamastr = (document.fform.agama.value);
+        var status ="" ;
+        if (fform.status.checked==true) {
+            status = "kawin";
+        }
+           else {
+            status = "belum kawin";
+           }
+        var jurusanstr = (document.fform.jurusan.value);
+        var komentarstr = (document.fform.komentar.value);
+
+        document.fform.onim.value = nimstr
+        document.fform.onama.value = namastr
+        document.fform.okelamin.value= kelaminstr
+        document.fform.oagama.value =agamastr
+        document.fform.ostatus.value =status
+        document.fform.ojurusan.value =jurusanstr
+        document.fform.okomentar.value =komentarstr
+
+        
+     }
+    
+    </script>
+    <form name="fform">
+        <center>
+            <h3>Data mahasiswa</h3>
+            <h3>Universitas Komputer Indonesia</h3>
+            <hr width="600" color="black">
+
+            
+        </center>
+      <pre>
+        Nim               :  <input type="text" size="11" name="nim">
+        nama mahasiswa    :  <input type="text" size="11" name="nama">
+        jenis kelamin     :  <select name="kelamin" size="1" id="">
+            <option value="perempuan" >perempuan</option>
+            <option value="pria" >pria</option>
+        
+        </select>
+        agama             :  <select name="agama" size="1"  id="">
+            
+          <option value="islam">islam</option>
+          <option value="khatolik"  >khatolik</option>
+          <option value="kristen"  >kristen</option>
+          <option value="hindu" >hindu</option>
+          <option value="budha"  >budha</option>
+          <option value="konghucu"  >konghucu</option>
+        </select>
+        status            :  <input type="radio" value="kawin" name="status">kawin
+        jurusan di UNIKOM  : <select name="jurusan" size="1" id="">
+            <option value="Teknik Informatika"> Teknik Informatika</option>
+            <option value="Teknik Pertambangan">Teknik Pertambangan </option>
+            <option value="Teknik Listrik"> Teknik Listrik</option>
+            <option value="Teknik Mesin"> Teknik Mesin</option>
+        </select>
+        komentar           : <textarea name="komentar"  id="" cols="40" rows="10"></textarea>
+      </pre>
+      <br> <center>
+        <input type="button" value="kirim" onclick="tekan()">
+      <input type="reset" value="ulang">
+      </center>
+      <pre>
+       Nim               : <input type="text" name="onim">
+       nama mahasiswa    : <input type="text" name="onama">
+       jenis kelamin     : <input type="text" name="okelamin">
+       agama             : <input type="text" name="oagama">
+       status            : <input type="text" name="ostatus">
+       jurusan di UNIKOM : <input type="text" name="ojurusan">
+       komentar          : <textarea name="okomentar" id="" cols="40" rows="10"></textarea>
+</body>
+</html>
